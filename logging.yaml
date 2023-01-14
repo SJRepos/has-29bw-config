@@ -8,3 +8,4 @@ logs:
   homeassistant.helpers.entity: warning
   homeassistant.helpers.template: critical
   homeassistant.components.smartthings: debug
+
