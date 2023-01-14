@@ -53,19 +53,5 @@ mqtt:
       qos: 0
       unit_of_measurement: "%"
 
-google_assistant:
-  project_id: hass-95979
-  service_account: !include ga_service_account.json
-  report_state: true
-  # exposed_domains:
-  #   - switch
-  #   - light
-  # entity_config:
-  #   switch.kitchen:
-  #     name: CUSTOM_NAME_FOR_GOOGLE_ASSISTANT
-  #     aliases:
-  #       - BRIGHT_LIGHTS
-  #       - ENTRY_LIGHTS
-  #   light.living_room:
-  #     expose: false
-  #     room: LIVING_ROOM
+google_assistant: !include assistant_google.yaml
+
