@@ -16,3 +16,4 @@ ip_bans.yaml
 secrets.yaml
 known_devices.yaml
 ga_service_account.json
+git_update.sh
