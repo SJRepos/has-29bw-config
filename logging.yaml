@@ -1,0 +1,10 @@
+default: info
+logs:
+  homeassistant.core: critical
+  homeassistant.setup: warning
+  homeassistant.loader: warning # hide custom_component warnings
+  homeassistant.exceptions: warning
+  homeassistant.helpers.script: warning
+  homeassistant.helpers.entity: warning
+  homeassistant.helpers.template: critical
+  homeassistant.components.smartthings: debug

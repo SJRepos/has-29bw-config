@@ -1,0 +1,41 @@
+## Groups
+#################################################################
+
+- platform: group
+  name: Living Room Outer Spots
+  entities:
+    - light.lr_dl_1
+    - light.lr_dl_2
+    - light.lr_dl_3
+    - light.lr_dl_4
+    - light.lr_dl_5
+    - light.lr_dl_6
+    - light.lr_dl_7
+    - light.lr_dl_8
+- platform: group
+  name: Living Room Middle Spots
+  entities:
+    - light.lr_dl_9
+    - light.lr_dl_10
+    - light.lr_dl_11
+    - light.lr_dl_12
+- platform: group
+  name: Living Room Inner Spots
+  entities:
+    - light.lr_dl_13
+    - light.lr_dl_14
+- platform: group
+  name: Living Room Outer
+  entities:
+    - light.living_room_outer_accent
+    - light.living_room_outer_spots
+- platform: group
+  name: Living Room Middle
+  entities:
+    - light.living_room_middle_accent
+    - light.living_room_middle_spots
+- platform: group
+  name: Living Room Inner
+  entities:
+    - light.living_room_inner_accent
+    - light.living_room_inner_spots

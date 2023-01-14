@@ -1,0 +1,28 @@
+api_version: 2
+ssl: false
+host: !secret influx2_host
+port: !secret influx2_port
+token: !secret influx2_token
+organization: !secret influx2_organization
+bucket: !secret influx2_bucket
+tags:
+  source: HA
+tags_attributes:
+  - friendly_name
+default_measurement: units
+# exclude:
+#   entities:
+#     - zone.home
+#   domains:
+#     - persistent_notification
+#     - person
+# include:
+#   domains:
+#     - sensor
+#     - binary_sensor
+#     - sun
+#   entities:
+#     - weather.home
+
+
+

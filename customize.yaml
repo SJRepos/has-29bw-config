@@ -1,0 +1,45 @@
+##########################################################
+## Rooms
+##########################################################
+
+# House
+#   Ground Floor
+#     Garage
+#     Store Room
+#     Entrance
+#   First Floor
+#     Corridor
+#     Living Room
+#     Kitchen
+#     Cloakroom
+#     Dining Room
+#   Second Floor
+#     Hallway (Stair?)
+#     Guest Bedroom
+#     Office
+#     Suneel's Room
+#     Bathroom
+#     Master Bedroom
+#     Master Bathroom
+
+
+# light.family_room:
+#   icon: mdi:sofa
+# light.master_bedroom:
+#   icon: mdi:bed
+# light.USER3_bedroom:
+#   icon: mdi:bed
+# light.USER4_bedroom:
+#   icon: mdi:bed
+# light.guest_bedroom:
+#   icon: mdi:bed
+# light.basement:
+#   icon: mdi:stairs
+# group.outside_lights:
+#   icon: mdi:wall-sconce
+# light.garage:
+#   icon: mdi:wall-sconce
+# light.landscape:
+#   icon: mdi:home
+# light.walkout:
+#   icon: mdi:wall-sconce

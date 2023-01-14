@@ -1,0 +1,71 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: 29BW
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret homeassistant_elevation
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/London
+  unit_system: metric
+  temperature_unit: C
+  # Urls to access HAS
+  external_url: !secret homeassistant_external_url
+  internal_url: !secret homeassistant_internal_url
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - !secret http_proxy # Add the IP address of the proxy server
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+    service_name: google_say
+    language: "en-uk"
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+
+light: !include groups.yaml
+
+logger: !include logging.yaml
+influxdb: !include influxdb.yaml
+
+mqtt:
+  sensor:
+    - name: "Cloackroom Temperature"
+      state_topic: "cloakroom-sensor/Climate/Temperature"
+      qos: 0
+      unit_of_measurement: "C"
+    - name: "Cloackroom Humidity"
+      state_topic: "cloakroom-sensor/Climate/Humidity"
+      qos: 0
+      unit_of_measurement: "%"
+
+google_assistant:
+  project_id: hass-95979
+  service_account: !include ga_service_account.json
+  report_state: true
+  # exposed_domains:
+  #   - switch
+  #   - light
+  # entity_config:
+  #   switch.kitchen:
+  #     name: CUSTOM_NAME_FOR_GOOGLE_ASSISTANT
+  #     aliases:
+  #       - BRIGHT_LIGHTS
+  #       - ENTRY_LIGHTS
+  #   light.living_room:
+  #     expose: false
+  #     room: LIVING_ROOM
